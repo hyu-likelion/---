@@ -1,0 +1,106 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #000000;
+  font-family: NanumSquare, sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: all 0.5s;
+  background-color: white;
+  width: 70vw;
+  height: 80vh;
+  left: 15vw;
+  top: 10vh;
+  border-radius: 50px;
+  box-shadow: 1px 1px 10px 3px grey;
+}
+.main:active {
+  transform: rotateY(180deg);
+}
+.front {
+  position: absolute;
+  z-index: 100;
+  transform: rotateY(0deg);
+  backface-visibility: hidden;
+}
+.back {
+  position: absolute;
+  transform: rotateY(180deg);
+  right: 0;
+  backface-visibility: hidden;
+}
+.toppart {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  top: 20%;
+  bottom: 90%;
+}
+.pic {
+  position: relative;
+  left: 8vw;
+  top: 10vw;
+}
+.info {
+  position: relative;
+  top: 10vw;
+  left: 10vw;
+  right: -5vw;
+  font-size: 4vw;
+  justify-content: center;
+  align-items: center;
+}
+.nameinfo {
+  position: relative;
+}
+.subinfo {
+  right: 40%;
+  top: 10%;
+  position: relative;
+  font-size: 1.5vw;
+}
+hr {
+  position: relative;
+  color: grey;
+  size: 1vw;
+  width: 50vw;
+  left: 4vw;
+  right: 3vw;
+  top: 15vw;
+}
+.bottompart {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  top: 20vw;
+  bottom: 10vw;
+  left: 5vw;
+  font-size: 1vw;
+}
+img {
+  float: left;
+}
+.url {
+  position: relative;
+  top: 10px;
+  left: 20px;
+}
+a {
+  color: black;
+  text-decoration: none;
+}
+.icon {
+  position: relative;
+  right: -25vw;
+  top: 20vh;
+}
