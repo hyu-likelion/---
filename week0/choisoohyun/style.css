@@ -1,0 +1,33 @@
+* {
+	box-sizing: border-box;
+}
+.background {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.flexC {
+	display: flex;
+	flex-direction: column;
+}
+
+.flexR {
+	display: flex;
+	align-items: center;
+}
+
+.nametext {
+	margin-bottom: 3%;
+}
+
+.subtext {
+	font: normal normal normal calc(70vw * 0.02) 'Nanum Myeongjo', serif;
+}
+
+.url {
+	text-decoration: none;
+	margin-left: 3%;
+	font: normal normal normal calc(70vw * 0.02) Arial;
+	color: white;
+}
