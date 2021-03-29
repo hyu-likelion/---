@@ -14,3 +14,19 @@
   - [Git-it Guide](http://jlord.us/git-it/)
   - [Git vs GitHub vs GitHub Desktop](https://velog.io/@choiiis/Git-Git-GitHub-GitHub-Desktop-%EC%A0%95%EB%A6%AC)
   - [Flexbox Froggy](https://flexboxfroggy.com/#ko)
+
+  - branch 생성 명령어 순서
+    1. git clone [url]
+    2. make branch
+      git checkout [branch name] - 브랜치 이동
+      git checkout -b [branch name] - 브랜치 생성 + 이동
+    3. week0 폴더 생성
+    4. html, css파일 추가
+    5. git add [filename]
+    6. git commit -m "message"
+    7. git push
+	     git push --set-upstream origin test
+    ---
+    8. git checkout main
+    9. git merge [branch name] 
+    10. git branch -d [branch name]
