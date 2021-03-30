@@ -24,8 +24,7 @@
     4. html, css파일 추가
     5. git add [filename]
     6. git commit -m "message"
-    7. git push
-	     git push --set-upstream origin test
+    7. git push --set-upstream origin test
     ---
     8. git checkout main
     9. git merge [branch name] 
