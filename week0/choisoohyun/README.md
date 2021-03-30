@@ -4,7 +4,7 @@
 
 나만의 명함 만들기
 
-<img src="/Users/soohyun/Desktop/멋사/The-Heart-of-the-Beast/week0/choisoohyun/my_namecard.png" alt="my_namecard" style="zoom:80%;" />
+<img src="./my_namecard.png" alt="my_namecard" style="zoom:80%;" />
 
 - flex 사용법에 대해 배워보았다 :)
 - class 상속 개념에 대해 알아가는 중이다 ;(
