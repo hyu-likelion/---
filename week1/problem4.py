@@ -5,4 +5,3 @@ def solution(participant, completion):
     for x in range(0,len(participant)):
         if participant[x] != completion[x]:
             return(participant[x])
-            break
