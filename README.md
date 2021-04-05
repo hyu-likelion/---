@@ -29,3 +29,8 @@
     8. git checkout main
     9. git merge [branch name] 
     10. git branch -d [branch name]
+   
+#### 두 번째 스터디
+일시: 2021.04.05 21시 </br>
+장소: 온라인 </br>
+내용: 각자 과제 문제 풀이
