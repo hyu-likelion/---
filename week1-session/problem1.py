@@ -1,9 +1,10 @@
 def student_func(x):
     if x % 3 == 0 or x % 5 == 0:
-        return threefive
+        a = "threefive"
     elif x % 3 == 0:
-        return three
+        a = "three"
     elif x % 5 == 0:
-        return five
+        a = "five"
     else:
-        return x
+        a = "x"
+        return a
