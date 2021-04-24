@@ -11,6 +11,4 @@ def student_func(x):
     pass
 
 
-from bwsi_grader.python.three_five import grader
-
-grader(student_func)
+print(student_func(105))
