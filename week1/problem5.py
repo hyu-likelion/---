@@ -1,12 +1,12 @@
 def solution(participant, completion):
     a = []
-    for i in range(len(participant)):
-        for j in range(len(completion)):
-            if participant[i] != completion[j]:
-                a.append(participant[i])
-                return a
-            else:
-                continue
+
+    for i in participant:
+        a.append(i)
+    for j in completion:
+        a.remove(j)
+
+    return a[0]
 
 
 participant = ["leo", "kiki", "eden"]
