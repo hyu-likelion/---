@@ -1,41 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>BLOG</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6"
-      crossorigin="anonymous"
-    />
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
-      crossorigin="anonymous"
-    ></script>
-    <style>
-      body {
-        text-align: center;
-      }
-    </style>
-  </head>
-  <body>
-    <h1>Blog Project</h1>
-    <div>
-      <a href="{%url 'new'%}">write blog</a>
-    </div>
-    <div class="container">
-      {% for blog in blogs%}
-      <div>
-        <h3>{{blog.title}}</h3>
-        {{blog.writer}} {{blog.summary}}
-        <a href="{%url 'detail' blog.id %}">...more</a>
-        <br />
-      </div>
-      {% endfor %}
-    </div>
-  </body>
-</html>
+{% extends 'base.html'%} {% block content %} {% if user.is_authenticated%}
+{{user.location}}에 사는 {{user.university}} 다니는 {{user.username}}님
+안녕하세요 {% endif %}
+<a href="?search=true&writer={{user.nickname}}">내가 쓴 글</a>
+<h1>Blog Project</h1>
+<div class="container">
+  {% for blog in blogs%}
+  <div>
+    <h3>{{blog.title}}</h3>
+    {{blog.writer}} {{blog.summary}}
+    <a href="{%url 'detail' blog.id %}">...more</a>
+    <br />
+  </div>
+  {% endfor %}
+</div>
+
+{% if blogs.has_previous%}
+<a href="?page=1">처음</a>
+<a href="?page={{blogs.previous_page_number}}">이전</a> {% endif %}
+<span>{{blogs.number}}</span>
+<span>of</span>
+<span>{{blogs.paginator.num_pages}}</span>
+{%if blogs.has_next%}
+<a href="?page={{blogs.next_page_number}}">다음</a>
+<a href="?page={{blogs.paginator.num_pages}}">마지막</a> {% endif %}<br />
+{%endblock%}

@@ -1,3 +1,5 @@
+{% extends 'base.html'%} {% block content %}
+
 <h1>Update your blog</h1>
 
 <form action="{%url 'update' blog.id %}" method="post">
@@ -8,3 +10,4 @@
   <textarea name="body" id="" cols="30" rows="10">{{blog.body}}</textarea>
   <button type="submit">submit</button>
 </form>
+{% endblock %}
