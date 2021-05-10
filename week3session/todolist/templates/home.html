@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+</head>
+<body>
+    <h1>Todo list</h1>
+    <div class="container">
+        {% for todo in todos %}
+        <li>
+            {{todo.body}}
+            <a href="{% url 'update' todo.id %}">수정하기 </a>
+            <a href="{% url 'delete' todo.id %}">삭제하기</a>
+        <br>
+        </li>
+        {% endfor %}
+    </div>
+    <br>
+    <form action="{%url 'create' %}" method="post">
+        {%csrf_token%}
+        {{form}}
+        <button type="submit">submit</button>
+    </form>
+</body>
+</html>
