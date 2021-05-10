@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h3>To Do List</h3>
+    <div class="container">
+        {% for todo in todos %}
+        <ul>
+            <li>{{todo.content}} <a href="{% url 'delete' todo.id %}"><button value="삭제">삭제</button></a> <a href="{% url 'edit' todo.id %}"><button>수정</button></a></li>
+        </ul>
+        {% endfor %}
+    </div>
+    <form action="{%url 'create' %}" method="post">
+        {%csrf_token%}
+        {{form.as_p}}<button type="submit">추가</button>
+    </form>
+{% endblock %}

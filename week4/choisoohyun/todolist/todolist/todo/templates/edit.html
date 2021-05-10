@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Edit 'To Do'</h1>
+
+<form action="{% url 'update' todo.id %}" method="post">
+    {%csrf_token%}
+    <!-- csrf공격을 막기 위해 써야됨 -->
+    <input type="text" name="content" value="{{todo.content}}">
+    <button type="submit">수정하기</button>
+</form>
+{% endblock %}
